@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="User"
+            type="com.example.pazitelj.models.User" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundTint="#BA2424"
+            android:orientation="vertical"
+            tools:context=".ui.profile.ProfileFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="286dp"
+                android:background="#4CAF50">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_profile_button"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:icon="@drawable/ic_edit"
+                    app:iconSize="45dp"
+                    app:iconTint="#0C0C0C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="151dp"
+                    app:cardCornerRadius="70dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/profile_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        imageUrl="@{User.pictureURL}"
+
+
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{User.username}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="User name"
+                    android:textSize="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/cor"
+                    android:layout_width="195dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="150dp"
+                    android:text="Sveukupna ocjena pazitelja"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/cor_rate"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="4dp"
+                    android:isIndicator="true"
+                    android:rating="@{User.carerOverallRating}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cor"
+                    android:theme="@style/RatingBar"
+                    />
+
+                <TextView
+                    android:id="@+id/phr"
+                    android:layout_width="200dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Ocjena njege ljubimca"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cor_rate" />
+
+                <RatingBar
+                    android:id="@+id/phr_rate"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="4dp"
+                    android:isIndicator="true"
+                    android:rating="@{User.petHandlingRating}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phr"
+                    android:theme="@style/RatingBar"/>
+
+
+                <TextView
+                    android:id="@+id/ccr"
+                    android:layout_width="158dp"
+                    android:layout_height="21dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Ljubaznost pazitelja"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phr_rate"
+                    />
+
+                <RatingBar
+                    android:id="@+id/ccr_rate"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="4dp"
+                    android:isIndicator="true"
+                    android:rating="@{User.carerCourtesyRating}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ccr"
+                    android:theme="@style/RatingBar"/>
+
+                <TextView
+                    android:id="@+id/oor"
+                    android:layout_width="190dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Sveukupa ocjena vlasnika"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/oor_rate"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="45dp"
+                    android:isIndicator="true"
+                    android:rating="@{User.ownerOverallRating}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oor"
+                    android:theme="@style/RatingBar"/>
+
+                <TextView
+                    android:id="@+id/pr"
+                    android:layout_width="120dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="25dp"
+                    android:text="Ocjena ljubimca"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oor_rate"
+                    />
+
+
+                <RatingBar
+                    android:id="@+id/pr_rate"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="45dp"
+                    android:isIndicator="true"
+                    android:rating="@{User.petRating}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pr"
+                    android:theme="@style/RatingBar"/>
+
+                <TextView
+                    android:id="@+id/ocr"
+                    android:layout_width="158dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Ljubaznost vlasnika"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pr_rate" />
+
+                <RatingBar
+                    android:id="@+id/ocr_rate"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="45dp"
+                    android:isIndicator="true"
+                    android:rating="@{User.ownerCourtesyRating}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ocr"
+                    android:theme="@style/RatingBar"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="start"
+                android:text="Opis"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="30dp"
+                android:text="@{User.bio}"
+                tools:text="Opis"
+                android:textSize="18dp"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:text="Email:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@{User.email}"
+                android:textSize="20sp"
+                tools:text="dkwodw@fwfjow" />
+
+
+            <TextView
+                android:id="@+id/phone_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="start"
+                android:text="Telefonski broj:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@{User.phoneNumber}"
+                tools:text="099 7213 2312"
+                android:textSize="20dp"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:text="Ljubimci"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/petList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/pet_item" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:layout_gravity="center"
+                android:text="Odjava"
+                android:layout_marginBottom="60dp"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/remove_user_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:layout_gravity="center"
+                android:text="UKLONI KORISNIKA"
+                android:visibility="gone"
+                android:layout_marginBottom="60dp"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

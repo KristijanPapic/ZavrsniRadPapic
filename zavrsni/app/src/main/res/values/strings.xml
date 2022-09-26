@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pazitelj</string>
+    <string name="title_home">Naslovnica</string>
+    <string name="title_post">Objava oglasa</string>
+    <string name="title_profile">Profil</string>
+    <string name="top_notifications">Notifications</string>
+    <string name="top_search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="server_client_id">255724298631-1vp1n1jmclak1meu9huqjifnmhfhkjfv.apps.googleusercontent.com</string>
+    <string name="no_users">nema prijava</string>
+    <string name="applied">Prijavljeno</string>
+    <string name="unaply">Prijava poništena</string>
+</resources>

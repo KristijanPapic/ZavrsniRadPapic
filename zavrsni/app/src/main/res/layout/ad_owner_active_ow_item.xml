@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="ad"
+            type="com.example.pazitelj.models.Ad" />
+        <variable
+            name="activeModel"
+            type="com.example.pazitelj.ui.home.ActiveAdsViewModel" />
+    </data>
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ad_pet_image"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:cropToPadding="true"
+                tools:src="@drawable/dog"
+                petImage="@{ad.petType}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ad_pet_name"
+                app:layout_constraintTop_toBottomOf="@id/ad_pet_image"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                tools:text="petar"
+                android:text="@{ad.PetName}"
+                android:textStyle="bold"
+                />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="151dp"
+                app:cardCornerRadius="70dp"
+                app:layout_constraintStart_toEndOf="@id/ad_pet_image"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/profile_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    imageUrl="@{ad.PictureURL}"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/ad_owner_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:text="@{ad.UserName}"
+                tools:text="Kristijan Papic"
+                app:layout_constraintStart_toEndOf="@id/cardView"
+                app:layout_constraintTop_toTopOf="parent" />
+            <RatingBar
+                android:id="@+id/phr_rate"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="78dp"
+                android:isIndicator="true"
+                android:rating="@{ad.UserRating}"
+                app:layout_constraintTop_toBottomOf="@id/ad_owner_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:theme="@style/RatingBar"
+                />
+
+
+            <TextView
+                android:id="@+id/ad_owner_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:text="@{ad.UserPhone}"
+                tools:text="0997704149"
+                android:layout_marginStart="160dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView"
+                />
+
+            <ImageView
+                android:id="@+id/phone_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintStart_toEndOf="@id/ad_owner_phone"
+                app:layout_constraintTop_toBottomOf="@id/cardView"/>
+
+
+            <TextView
+                android:id="@+id/ad_owner_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="@{ad.UserEmail}"
+                android:textSize="15sp"
+                android:layout_marginStart="160dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="kristijanpapic04@gmail.com"
+                app:layout_constraintTop_toBottomOf="@id/ad_owner_phone"
+                />
+
+            <ImageView
+                android:id="@+id/email_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_email"
+                app:layout_constraintStart_toEndOf="@id/ad_owner_email"
+                app:layout_constraintTop_toBottomOf="@id/phone_icon" />
+            <TextView
+                android:id="@+id/add_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toBottomOf="@id/ad_pet_name"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@{ad.job}"
+                tools:text="Dog Walking"/>
+
+            <TextView
+                android:id="@+id/app_users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/app_users_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                appliedUserCount="@{ad.appliedUserCount}"
+                android:textSize="10dp"
+                android:layout_marginStart="20dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/app_users_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="Prijave"
+                android:textSize="8dp"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <TextView
+                android:id="@+id/carer_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/light_green"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Carer: "
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/carer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/carer_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/light_green"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"
+                android:visibility="gone"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/remove_ad_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="Obriši"
+                android:textSize="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/red"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

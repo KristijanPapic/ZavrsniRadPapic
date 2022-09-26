@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="550dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#D3D3D3"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Odaberite filtre"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Vrsta ljubimca"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18dp" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/all_radio"
+            android:text="Sve"
+            android:checked="true"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/dog_radio"
+            android:text="Pas"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/cat_radio"
+            android:text="Mačka"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/other_radio"
+            android:text="Ostalo"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/other_input_layout"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="25dp"
+            android:hint="Ostalo"
+            android:visibility="gone"
+            android:layout_gravity="start"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/other_input"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Vrsta posla"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18dp" />
+    <RadioGroup
+        android:id="@+id/jobRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/joball_radio"
+            android:text="Sve"
+            android:checked="true"
+            />
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/pw_radio"
+        android:text="Šetnja ljubimca"
+        />
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/pwaoh_radio"
+        android:text="Hranjenje ljubimca kod vlasnika"
+        />
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/pwach_radio"
+        android:text="Hranjenje ljubimca kod pazitelja"
+        />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/courtesy_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minimalna ocijena"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:layout_marginVertical="10dp"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars= "5"
+        android:stepSize="1"
+        android:isIndicator="false"
+        android:layout_gravity="center"
+        android:theme="@style/RatingBar"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset_button"
+            android:text="Resetiraj"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/red"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filter_button"
+            android:text="Filtriraj"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

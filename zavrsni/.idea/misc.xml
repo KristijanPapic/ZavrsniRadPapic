@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android/zavrsni/app/src/main/res/drawable/border.xml" value="0.468" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/drawable/ic_profile.xml" value="0.294" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout-w1240dp/pet_item_view_only.xml" value="0.20147255689424365" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/activity_first_time_login.xml" value="0.31354166666666666" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/activity_login.xml" value="0.2695035460992908" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/activity_signin.xml" value="0.2695035460992908" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/activity_signup.xml" value="0.22" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/ad_carer_active_app_item.xml" value="0.3890625" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/ad_carer_active_ow_item.xml" value="0.3890625" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/ad_carer_item.xml" value="0.4111776447105788" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/ad_owner_active_app_item.xml" value="0.3890625" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/ad_owner_active_ow_item.xml" value="0.4543795620437956" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/ad_owner_item.xml" value="0.33" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/add_pet_popup.xml" value="0.31354166666666666" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/add_rating_popup.xml" value="0.31295425395468146" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/applied_user_item.xml" value="0.33" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/carer_filter_popup.xml" value="0.45404018811457886" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/filter_popup.xml" value="0.45384615384615384" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_active_ads.xml" value="0.31354166666666666" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_applied_users.xml" value="0.31295425395468146" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_applied_users_.xml" value="0.31295425395468146" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_available_ads.xml" value="0.21893491124260356" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_carer_post.xml" value="0.284375" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_dashboard.xml" value="0.4945652173913043" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_edit_carer_ad.xml" value="0.3026934587430526" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_edit_owner_ad.xml" value="0.3026934587430526" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_full_ad.xml" value="0.3536458333333333" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_full_carer_ad.xml" value="0.2902949978623343" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_full_owner_ad.xml" value="0.33" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_home.xml" value="0.38144329896907214" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_notifications.xml" value="0.4945652173913043" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_owner_post.xml" value="0.25" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_owner_post2.xml" value="0.284375" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_post.xml" value="0.33" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_posted.xml" value="0.3026934587430526" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragment_profile.xml" value="0.3702970297029703" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/fragmnet_active_ads1.xml" value="0.3536458333333333" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/home_footer.xml" value="0.5541666666666667" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/home_header.xml" value="0.5541666666666667" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/list_item.xml" value="0.284375" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/owner_filter_popup.xml" value="0.45404018811457886" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/pet_item.xml" value="0.4365217391304348" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/layout/pet_item_view_only.xml" value="0.31354166666666666" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/menu/bottom_nav_menu.xml" value="0.5541666666666667" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/menu/dropdown_menu.xml" value="0.284375" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/menu/top_app_bar.xml" value="0.5541666666666667" />
+        <entry key="..\:/android/zavrsni/app/src/main/res/xml/network_security_config.xml" value="0.31354166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

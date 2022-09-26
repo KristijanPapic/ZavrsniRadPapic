@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="homeModel"
+            type="com.example.pazitelj.ui.home.HomeViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.home.ActiveAdsFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dobrodošli"
+            android:textSize="24sp"
+            android:paddingTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{homeModel.status.toString()}"
+            tools:text="User"
+            android:paddingTop="10dp"
+            android:textSize="24sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Molim vas unesite dodatne informacije"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Telefonski broj"
+            android:gravity="center"
+            android:nextFocusDown="@id/bio_input_layout"
+            app:errorEnabled="true"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_input"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="phone"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bio_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Opis"
+            android:gravity="center"
+            app:helperTextEnabled="true"
+            app:helperText="Opišite se u par riječi"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bio_input"
+                android:layout_width="350dp"
+                android:height="90dp"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ljubimci"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerInsetStart="25dp"
+            app:dividerInsetEnd="25dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/first_add_pet_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_add_round"
+            app:iconSize="55dp"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:layout_gravity="center"
+            />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/petList"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:listitem="@layout/pet_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/proceed_button"
+                android:layout_gravity="bottom|end"
+                android:gravity="bottom"
+                android:layout_margin="10dp"
+                android:text="Nastavi"
+                app:icon="@drawable/ic_arrow_right"
+                android:backgroundTint="@color/dark_green"
+                />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+</layout>
